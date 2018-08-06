@@ -1,6 +1,7 @@
 ﻿using System;
 using Serilog;
 using Serilog.Events;
+using Serilog.Formatting.Compact;
 using Serilog.Sinks.Fluentd;
 
 namespace KintoHub.Logging
@@ -22,7 +23,7 @@ namespace KintoHub.Logging
             var config = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .Enrich.FromLogContext()
-                .WriteTo.LiterateConsole();
+                .WriteTo.Console(new CompactJsonFormatter());
 
             if ((options & LogOptions.DISABLE_ASP_NET) == LogOptions.DISABLE_ASP_NET)
             {
