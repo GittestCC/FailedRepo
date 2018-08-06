@@ -23,7 +23,7 @@ namespace KintoHub.Logging
             var config = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .Enrich.FromLogContext()
-                .WriteTo.Console(new CompactJsonFormatter());
+                .WriteTo.Console(new RenderedCompactJsonFormatter());
 
             if ((options & LogOptions.DISABLE_ASP_NET) == LogOptions.DISABLE_ASP_NET)
             {
