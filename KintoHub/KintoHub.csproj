@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Serilog" Version="2.6.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.0.0" />
     <PackageReference Include="Serilog.Sinks.Fluentd" Version="0.2.1" />
     <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
   </ItemGroup>
